@@ -1,9 +1,9 @@
-  const add = function (a, b) {
-    return a + b;
+  const add = function (array) {
+    return array.reduce((result, current) => result + current)
   };
   
-  const subtract = function (a, b) {
-    return a - b;
+  const subtract = function (array) {
+    return array.reduce((result, current) => result - current)
   };
 
   const multiply = function (array) {
@@ -40,12 +40,49 @@ alert(result);
 
 const numButtons = document.querySelectorAll('.num');
 const equalButton = document.querySelector('.equal');
+const minusButton =document.querySelector('.minus');
+const multiplyButton = document.querySelector('.multiply');
+const divideButton = document.querySelector('.divide');
+const addButton = document.querySelector('.plus');
 let display = document.querySelector('.result');
 let result = 0;
+let numbers = [];
 
 numButtons.forEach(button => {
     button.addEventListener('click', function() {
         const buttonValue = this.textContent; 
-        display = buttonValue;
+        display.value += buttonValue;
     });
+});
+
+multiplyButton.addEventListener('click', function(){
+
+    let newNumber = display.value;
+    numbers.push(newNumber);
+    display.value ='';
+    console.log(multiply(numbers));
+});
+
+divideButton.addEventListener('click', function(){
+
+    let newNumber = display.value;
+    numbers.push(newNumber);
+    display.value ='';
+    console.log(divide(numbers));
+});
+
+addButton.addEventListener('click', function(){
+
+    let newNumber = display.value;
+    numbers.push(newNumber);
+    display.value ='';
+    console.log(add(numbers));
+});
+
+minusButton.addEventListener('click', function(){
+
+    let newNumber = display.value;
+    numbers.push(newNumber);
+    display.value ='';
+    console.log(subtract(numbers));
 });
