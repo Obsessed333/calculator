@@ -15,6 +15,7 @@ function calculate(firstNumber, operator, secondNumber) {
 const numButtons = document.querySelectorAll('.num');
 const equalButton = document.querySelector('.equal');
 const operationButton = document.querySelectorAll('.operation');
+const clearButton = document.querySelector('.clear');
 let display = document.querySelector('.result');
 let secondDisplay = document.querySelector('.storedValue');
 let result = [];
@@ -26,6 +27,12 @@ numButtons.forEach(button => {
     });
 });
 
+clearButton.addEventListener('click', function(){
+
+  display.value = '';
+  secondDisplay.value ='';
+  result =[];
+});
 
 operationButton.forEach(button => {
   button.addEventListener('click', function() {
@@ -44,28 +51,32 @@ equalButton.addEventListener('click', function(){
   if(secondDisplay.value.includes("+")){
     for (let i = result.length - 2; i < result.length; i++) {
       
-      display.value = +result[i] + +result[i-1]
+      const unroundedAnswer = +result[i] + +result[i-1];
+      display.value = Math.round(unroundedAnswer * 100) / 100;
   }
   secondDisplay.value ='';
   }
   if(secondDisplay.value.includes("x")){
     for (let i = result.length - 2; i < result.length; i++) {
       
-      display.value = +result[i] * +result[i-1]
+      const unroundedAnswer = +result[i] * +result[i-1];
+      display.value = Math.round(unroundedAnswer * 100) / 100;
       secondDisplay.value ='';
   }
   }
   if(secondDisplay.value.includes("-")){
     for (let i = result.length - 2; i < result.length; i++) {
       
-      display.value = +result[i-1] - +result[i]
+      const unroundedAnswer = +result[i-1] - +result[i];
+      display.value = Math.round(unroundedAnswer * 100) / 100;
       secondDisplay.value ='';
   }
   }
   if(secondDisplay.value.includes("/")){
     for (let i = result.length - 2; i < result.length; i++) {
       
-      display.value = +result[i-1] / +result[i]
+      const unroundedAnswer = +result[i-1] / +result[i];
+      display.value = Math.round(unroundedAnswer * 100) / 100;
       secondDisplay.value ='';
   }
   }

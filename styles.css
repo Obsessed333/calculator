@@ -25,13 +25,14 @@ body{
     align-items: center;
     flex-wrap: wrap;
     flex-direction: column;
+   
     
 }
 
 .numcontainer{
     display: flex;
     height: 200px;
-    width: 180px;
+    width: 190px;
     justify-content: center;
     flex-direction: row-reverse;
     align-content: center;
@@ -44,14 +45,14 @@ body{
     height:40px;
     border:0;
     text-align: right;
-    
-    
+    margin-bottom: 10px;
+    font-size: 25px;
 }
 
 .equal{
 
     height: 40px;
-    width: 150px;
+    width: 160px;
 }
 
 .num{
@@ -69,4 +70,12 @@ body{
 #num0{
 
     width:120px;
+}
+
+.clear{
+
+width:160px;
+height: 25px;
+
+
 }
