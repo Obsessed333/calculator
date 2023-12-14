@@ -1,20 +1,25 @@
 function add(a, b) {
-  return a + b;
+  let result= a + b;
+  return Math.round(result * 100) / 100;
 }
 
 function subtract(a, b) {
-  return a - b;
+  let result = a - b;
+  return Math.round(result * 100) / 100;
 }
 
 function multiply(a, b) {
-  return a * b;
+  let result= a * b;
+  return Math.round(result * 100) / 100;
+
 }
 
 function divide(a, b) {
   if (b === 0) {
       return "Error: Division by zero";
   }
-  return a / b;
+  let result= a / b;
+  return Math.round(result * 100) / 100;
 }
 
 function solveOperation(operation,a, b){
