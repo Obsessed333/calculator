@@ -60,7 +60,8 @@ clearButton.addEventListener('click', function(){
 
   display.value = '';
   secondDisplay.value ='';
-  result =[];
+  previousValue = 0;
+  previousOperation = null;
 });
 
 operationButton.forEach(button => {
