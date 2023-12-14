@@ -50,7 +50,6 @@ const operationButton = document.querySelectorAll('.operation');
 const clearButton = document.querySelector('.clear');
 let display = document.querySelector('.result');
 let secondDisplay = document.querySelector('.storedValue');
-let result = [];
 let previousValue = 0;
 let previousOperation = null;
 
