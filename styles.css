@@ -129,7 +129,7 @@ body{
 
 .clear{
 
-width:160px;
+width:80px;
 height: 25px;
 border-radius: 10%;
 border:0.5px solid black;
@@ -137,5 +137,17 @@ background: darkblue;
 animation:  switchColor 5s ;
 animation-iteration-count: infinite;
 color: azure;
+
+}
+
+.backspace{
+    width:80px;
+    height: 25px;
+    border-radius: 10%;
+    border:0.5px solid black;
+    background: darkblue; 
+    animation:  switchColor 5s ;
+    animation-iteration-count: infinite;
+    color: azure;
 
 }

@@ -45,6 +45,7 @@ if(operation =='+'){
 
 
 const numButtons = document.querySelectorAll('.num');
+const bsButton = document.querySelector('.backspace');
 const equalButton = document.querySelector('.equal');
 const operationButton = document.querySelectorAll('.operation');
 const clearButton = document.querySelector('.clear');
@@ -91,3 +92,11 @@ equalButton.addEventListener('click', function(){
   
   secondDisplay.value = solveOperation(previousOperation, previousValue, +display.value);
 });
+
+bsButton.addEventListener('click', function(){
+
+
+  display.value = display.value.substring(0, display.value.length - 1);
+
+  
+})
