@@ -16,7 +16,7 @@ function multiply(a, b) {
 
 function divide(a, b) {
   if (b === 0) {
-      return "Error: Division by zero";
+      return "ERROR";
   }
   let result= a / b;
   return Math.round(result * 100) / 100;
